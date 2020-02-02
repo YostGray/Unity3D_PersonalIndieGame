@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Tile
+  - "\u53D8\u88C5\u4ED3\u5E93"
+  - ironBlock
+  - Package_item
+  - UI_slot
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Player
+  - 
+  - 
+  - Interactive
+  - 
+  - 
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: palyer
+    uniqueID: 2732985457
+    locked: 0
+  - name: weapon
+    uniqueID: 3322074329
+    locked: 0
+  - name: Iteam
+    uniqueID: 3906769973
+    locked: 0

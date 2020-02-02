@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1346871640511994}
+  m_IsPrefabParent: 1
+--- !u!1 &1346871640511994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4434063219011670}
+  - component: {fileID: 114160142962265736}
+  m_Layer: 0
+  m_Name: "\u73A9\u5BB6\u53D8\u88C5\u4ED3\u5E93\u5355\u4F8B"
+  m_TagString: "\u53D8\u88C5\u4ED3\u5E93"
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4434063219011670
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346871640511994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37, y: 1157, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114160142962265736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346871640511994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656a7cb99309443469e57a2e2a85093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heads:
+  - keyName: "\u666E\u901A"
+    headStand: {fileID: 21300000, guid: 354ec9370feca2148b74a766d23ba252, type: 3}
+    headUp: {fileID: 21300000, guid: f1449ca451afb314993c8444cb06c858, type: 3}
+    headDown: {fileID: 21300000, guid: 3d47a1ad96c91e34d916c1554947356a, type: 3}
+  - keyName: "\u5200\u75A4"
+    headStand: {fileID: 21300000, guid: 86cd131d84c67dd43b9938db38e89b19, type: 3}
+    headUp: {fileID: 21300000, guid: 1f0a6edc861432e4a88894c3d968d615, type: 3}
+    headDown: {fileID: 21300000, guid: c327ce0f9908cba4d93e575ff437386b, type: 3}
+  - keyName: "\u778E\u773C"
+    headStand: {fileID: 21300000, guid: b61e63ab7a75b6b40970ba60cab20723, type: 3}
+    headUp: {fileID: 21300000, guid: cce15630647b34b4a9c601f0f179152c, type: 3}
+    headDown: {fileID: 21300000, guid: b1f215d8e1021b14b8eaea08f920c14a, type: 3}
+  hairs:
+  - keyName: "\u4E38\u5B50"
+    hairStand: {fileID: 21300000, guid: 169c7f47be0febe49971feedf4ed5158, type: 3}
+    hairUp: {fileID: 21300000, guid: e23db0d116c45c444aa5dd62b7d10696, type: 3}
+    hairDown: {fileID: 21300000, guid: 6593d829c5ea0ec4cbd0390c6197cd74, type: 3}
+  - keyName: "\u534A\u906E"
+    hairStand: {fileID: 21300000, guid: 9f47c0ae04ce2f6449989faae8863e77, type: 3}
+    hairUp: {fileID: 21300000, guid: 5bb3aa31cc276a94bbd0e48a5173f28e, type: 3}
+    hairDown: {fileID: 21300000, guid: aef36b3a5f5a90d4b92ba5a31f9e6c2e, type: 3}
+  - keyName: "\u666E\u901A"
+    hairStand: {fileID: 21300000, guid: afa5d76dea47244418c1565a46bb028c, type: 3}
+    hairUp: {fileID: 21300000, guid: 3662bbac82b65ff44be76ad6f87c4a02, type: 3}
+    hairDown: {fileID: 21300000, guid: f191a83ff3a55e04bb78b14197bf438c, type: 3}
+  - keyName: "\u83AB\u897F\u5E72"
+    hairStand: {fileID: 21300000, guid: b3df5813b4b0a344984eb91237b04c79, type: 3}
+    hairUp: {fileID: 21300000, guid: a61ab688246122a488fe1a0395231459, type: 3}
+    hairDown: {fileID: 21300000, guid: d007525305673c141869c2fc383ac8cd, type: 3}
+  bodys:
+  - keyName: "\u5939\u514B"
+    bodyStand: {fileID: 21300000, guid: 22534db999317f1478dca95278a0a628, type: 3}
+    bodyWalk: {fileID: 21300000, guid: 8381d60498a99bb4f958f244dc7abc86, type: 3}
+    bodyCrouch: {fileID: 21300000, guid: c39e1f0bdb526964ca614778522755d2, type: 3}
+    leftHandStand: {fileID: 21300000, guid: 8ff18f4ee50c728449b358d9266afdf8, type: 3}
+    leftHandWalkFront: {fileID: 21300000, guid: df6d53dac36bc994f80c3a18ebc0eb1e,
+      type: 3}
+    leftHandWalkBack: {fileID: 21300000, guid: ff86e9ec852ff794f896b88b3b32eb9d, type: 3}
+    leftHandcrouch: {fileID: 21300000, guid: d17e81a9a3e36e6418b8cd493265c51d, type: 3}
+    leftHandHoldWeaponFront: {fileID: 21300000, guid: 74d66a315303b844ea4d82cc10602113,
+      type: 3}
+    leftHandHoldWeaponFrontRecoil: {fileID: 21300000, guid: e03a4f07e3caa8d45b19e85e2f8c568e,
+      type: 3}
+    leftHandHoldWeaponUp: {fileID: 21300000, guid: 94b931fb30ea9094c8dff46eccee10f0,
+      type: 3}
+    leftHandHoldWeaponUpRecoil: {fileID: 21300000, guid: a0fb88d7b74dc874091ac53ece72bb82,
+      type: 3}
+    leftHandHoldWeaponObliqueUp: {fileID: 21300000, guid: bc87579bbfed179429152ced07a5dba0,
+      type: 3}
+    leftHandHoldWeaponObliqueUpRecoil: {fileID: 21300000, guid: d9f3ff31e105539439de9dde9a049005,
+      type: 3}
+    rightHandStand: {fileID: 21300000, guid: 4a4bb1429c28d7640abdcbaf37f99acf, type: 3}
+    rightHandWalkFront: {fileID: 21300000, guid: d9ad7a10e829a57468172b231d38a6ae,
+      type: 3}
+    rightHandWalkBack: {fileID: 21300000, guid: a68bea1764e1fc6489c426ab9b4f8e50,
+      type: 3}
+    rightHandcrouch: {fileID: 21300000, guid: efd74d2d36a67b14e80b8b5ec5654849, type: 3}
+    rightHandHoldWeaponFront: {fileID: 21300000, guid: b0397ee88dba1d843bdc9a1e7a2823d8,
+      type: 3}
+    rightHandHoldWeaponFrontRecoil: {fileID: 21300000, guid: c654a68e7127562478ed8a23b7e99748,
+      type: 3}
+    rightHandHoldWeaponUp: {fileID: 21300000, guid: e20d3c07392e9cd4e9f0852ddecfe243,
+      type: 3}
+    rightHandHoldWeaponUpRecoil: {fileID: 21300000, guid: e82ff922b165c0441820cfeb172145f9,
+      type: 3}
+    rightHandHoldWeaponObliqueUp: {fileID: 21300000, guid: ddbee82437eea084097ccb603bcdd771,
+      type: 3}
+    rightHandHoldWeaponObliqueUpRecoil: {fileID: 21300000, guid: 837e896157b0fd447b1934b85b231872,
+      type: 3}
+  foots:
+  - keyName: "\u666E\u901A"
+    footStand: {fileID: 21300000, guid: 78e46d3a0bcaaeb4a92dd46fc1524f06, type: 3}
+    footWalkFront: {fileID: 21300000, guid: 284673ccf53c546428cc29d3f27882a2, type: 3}
+    footWalkBack: {fileID: 21300000, guid: 6edc2e69aa5715e46954ff84299b1803, type: 3}
+    footWalkMid_Jump: {fileID: 21300000, guid: fd4457365b9501444b27f8dde60b53f3, type: 3}
+    footJumpFall: {fileID: 21300000, guid: 39f3f40b989e7f844ac7c182af0ab0ed, type: 3}
+    footCrouch: {fileID: 21300000, guid: 7b6614abeea2d0c4cbb863b1fe8d6d57, type: 3}
+    footCrouchWalk1: {fileID: 21300000, guid: 2c86f28a881f8574e85060f531f6ddcd, type: 3}
+    footCrouchWalk2: {fileID: 21300000, guid: 9eb1a5ed578180d42a9847cc1c442c14, type: 3}
