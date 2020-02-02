@@ -27,7 +27,8 @@ public class NormalShoes : EquipmentBase
     {
         playerAttribute.canRun = false;
         playerAttribute.footKeyName = "裸体";
-        GameObject.Find("裤子").GetComponent<Image>().sprite = ;
+        //todo 脱光裤子后 把裤子置空
+        //GameObject.Find("裤子").GetComponent<Image>().sprite = ;
         base.onTakeOffEquipment(playerAttribute);
     }
 }
