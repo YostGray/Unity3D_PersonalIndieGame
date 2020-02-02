@@ -1,8 +1,8 @@
-# Unity3D 绳子物语
+# Unity3D 类银河恶魔城小游戏
 ## 暂定名称 working title
-绳枪物语 RopeGunStory
+地下物语 UndergroundStory
 ## 描述 description
-一个以Unity开发练手为主要目的的，规模有限的类银河战士解谜小游戏。假如还挺好玩的话，会免费发布。
+一个以Unity开发练手为主要目的的，规模有限的类银河战士解谜小游戏。发布在我自己的[个人网站](http://yostgray.cn "personal web site")上。
 
 游戏将会是一个横板平台跳跃的2d游戏，特色是磁体枪。
 
@@ -18,5 +18,4 @@
 
 进行中💦  瓶颈中💫 已完成👍 等待中⏰
 
-## 子计划书
-
+## [子计划书](前期计划\前期规划书.md) subReadMe
