@@ -15,6 +15,7 @@ public class SceneItemBase : MonoBehaviour
 
     void Awake()
     {
-        packageUtil = GameObject.Find("UI_背包").GetComponent<PackageUtil>();
+        //改用单例
+        packageUtil = PackageUtil.Instance;// GameObject.Find("UI_背包").GetComponent<PackageUtil>();
     }
 }

@@ -11,7 +11,7 @@ public class NormalShoes : EquipmentBase
     public NormalShoes()
     {
         equipmentName = "普通鞋子";
-        equipmentSprite = Resources.Load<Sprite>("sprites/鞋子");
+        equipmentSprite = Resources.Load<Sprite>("sprites/普通鞋子");
         description = "普通的鞋子，比较柔软\n穿上可以跑步";
         equipmentType = EquipmentType.foot;
     }
@@ -28,7 +28,7 @@ public class NormalShoes : EquipmentBase
         playerAttribute.canRun = false;
         playerAttribute.footKeyName = "裸体";
         //todo 脱光裤子后 把裤子置空
-        //GameObject.Find("裤子").GetComponent<Image>().sprite = ;
+        GameObject.Find("裤子").GetComponent<SpriteRenderer>().sprite = null;
         base.onTakeOffEquipment(playerAttribute);
     }
 }

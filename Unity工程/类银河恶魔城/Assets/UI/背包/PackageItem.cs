@@ -93,15 +93,13 @@ public class PackageItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     this.transform.SetParent(originalParent);
                 }
             }
-            else if (rayHit.name == "UI_背包栏")
+            else if (rayHit.name == "UI_背包栏" && equipment.isPutOn)//命中了背包且本身在装备槽中
             {
                 Debug.Log("脱掉并放回装备");
-                //this.transform.position = originalParent.position;
-                //this.transform.SetParent(originalParent);
-                rayHit.GetComponentInParent<PackageUtil>().ReturnEquipmentFromSlot(this.equipment);
+                //rayHit.GetComponentInParent<PackageUtil>().ReturnEquipmentFromSlot(this.equipment);
+                PackageUtil.Instance.ReturnEquipmentFromSlot(this.equipment);
                 equipment.onTakeOffEquipment(PackageUtil.playerAttribute);
                 Destroy(this.gameObject);
-                
             }
             else//命中的不是合法Tag
             {

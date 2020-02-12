@@ -15,6 +15,7 @@ public class PlayerAnimation : MonoBehaviour
     private PlayerSpriteStorage spriteStorage;
     private PlayerAttribute playerAttribute;
 
+    bool isOverwriteHand = false;
 
     void Start()
     {
@@ -28,7 +29,9 @@ public class PlayerAnimation : MonoBehaviour
         changeHead(PlayerSpriteStorage.headMotionType.stand);
         changeBody(PlayerSpriteStorage.bodyMotionType.stand);
         changeFoot(PlayerSpriteStorage.footMotionType.stand);
-        changeHand(PlayerSpriteStorage.handMotionType.stand);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.stand);
+
     }
 
     private void animation_walkFront()
@@ -37,19 +40,22 @@ public class PlayerAnimation : MonoBehaviour
         changeHead(PlayerSpriteStorage.headMotionType.stand);
         changeBody(PlayerSpriteStorage.bodyMotionType.walkFront);
         changeFoot(PlayerSpriteStorage.footMotionType.walkFront);
-        changeHand(PlayerSpriteStorage.handMotionType.walkFront);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.walkFront);
     }
 
     private void animation_walkMid()
     {
         changeFoot(PlayerSpriteStorage.footMotionType.walkMid);
-        changeHand(PlayerSpriteStorage.handMotionType.walkMid);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.walkMid);
     }
 
     private void animation_walkBack()
     {
         changeFoot(PlayerSpriteStorage.footMotionType.walkBack);
-        changeHand(PlayerSpriteStorage.handMotionType.walkBack);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.walkBack);
     }
 
     private void animation_jump()
@@ -58,7 +64,8 @@ public class PlayerAnimation : MonoBehaviour
         changeHair(PlayerSpriteStorage.hairMotionType.up);
         changeBody(PlayerSpriteStorage.bodyMotionType.stand);
         changeFoot(PlayerSpriteStorage.footMotionType.jump);
-        changeHand(PlayerSpriteStorage.handMotionType.stand);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.stand);
 
     }
 
@@ -68,7 +75,8 @@ public class PlayerAnimation : MonoBehaviour
         changeHair(PlayerSpriteStorage.hairMotionType.down);
         changeBody(PlayerSpriteStorage.bodyMotionType.walkFront);
         changeFoot(PlayerSpriteStorage.footMotionType.fall);
-        changeHand(PlayerSpriteStorage.handMotionType.stand);
+        if (!isOverwriteHand)
+            changeHand(PlayerSpriteStorage.handMotionType.stand);
     }
 
 
@@ -356,7 +364,7 @@ public class PlayerAnimation : MonoBehaviour
 
 
     /// <summary>
-    /// 切换手部的层级
+    /// 切换手部的层级 同时使得衣服的手臂不会随 站立 走动 跳跃 改变
     /// </summary>
     /// <param name="key">为真时 右手会在前面</param>
     public void switchHand(bool key)
@@ -365,11 +373,13 @@ public class PlayerAnimation : MonoBehaviour
         {
             righthandSkinRenderer.sortingOrder = 11;
             righthandClothRenderer.sortingOrder = 12;
+            isOverwriteHand = true;
         }
         else if (righthandSkinRenderer.sortingOrder!=3/* && !playerAttribute.isHoldingGun*/)
         {
             righthandSkinRenderer.sortingOrder = 3;
             righthandClothRenderer.sortingOrder = 4;
+            isOverwriteHand = false;
         }
     }
 }

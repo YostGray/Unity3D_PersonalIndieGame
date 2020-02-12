@@ -6,6 +6,7 @@ using UnityEngine;
 /// <summary>
 /// 存储所有的主角的换装图片，用数组而不是容器是方便序列化
 /// 感觉用数据库加反射会好不少，但是俺不会
+/// 或者使用ScriptableObject来方便管理
 /// </summary>
 public class PlayerSpriteStorage : MonoBehaviour
 {

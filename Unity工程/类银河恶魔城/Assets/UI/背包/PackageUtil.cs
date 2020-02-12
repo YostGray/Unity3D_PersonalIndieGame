@@ -8,11 +8,24 @@ using UnityEngine.UI;
 /// </summary>
 public class PackageUtil : MonoBehaviour
 {
+    private static PackageUtil _Instance;
+    public static PackageUtil Instance
+    {
+        get
+        {
+            if (_Instance == null)
+            {
+                _Instance = GameObject.Find("UI_背包").GetComponent<PackageUtil>();
+            }
+            return _Instance;
+        }
+    }
+
     public static PlayerAttribute playerAttribute;
     [SerializeField]
     private GameObject content;
     [SerializeField]
-    private GameObject prefab;//物品槽预制体
+    private GameObject solotPrefab;//物品槽预制体
 
     public static GameObject parentPackage;
     public static Text descriptionText;
@@ -31,7 +44,8 @@ public class PackageUtil : MonoBehaviour
     {
         playerAttribute.equipmentList.Add(equipment);
 
-        GameObject newEquipment = Instantiate(prefab, content.transform);
+        //TODO 使用对象池以节省性能
+        GameObject newEquipment = Instantiate(solotPrefab, content.transform);
         newEquipment.GetComponentInChildren<PackageItem>().setEquipment(equipment);//把背包图标与真实装备对应上
 
         RefreshPackageSize();
@@ -42,7 +56,7 @@ public class PackageUtil : MonoBehaviour
     /// </summary>
     public void ReturnEquipmentFromSlot(EquipmentBase equipment)
     {
-        GameObject newEquipment = Instantiate(prefab, content.transform);
+        GameObject newEquipment = Instantiate(solotPrefab, content.transform);
         newEquipment.GetComponentInChildren<PackageItem>().setEquipment(equipment);//把背包图标与真实装备对应上
         RefreshPackageSize();
     }
